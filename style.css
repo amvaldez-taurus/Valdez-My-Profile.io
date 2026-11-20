@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&family=Shrikhand&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #294735;
+    color: #ffffff;
+    font-family: 'Roboto Mono', Tahoma, monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Shrikhand', Georgia, serif;
+    color: #ffd1de;
+    line-height: 1.2
+}
+
+h1 {
+    font-size: 7rem;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8rem;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: #F7DEE5;
+}
+
+.siteheader{
+    background-color: #343f37;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo img {
+    display: block;
+    width: 6rem;
+    height: auto;
+}
+
+.icontoggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #294735;
+    border-radius: 50%;
+    background-color: #F7DEE5;
+    color: #294735;
+    cursor: pointer;
+}
+
+.diamond-star {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.navlinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: max-content;
+    max-width: 90vw;
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+
+    background-color: #294735;
+    border: 2px solid #F7DEE5;
+    border-radius: 0.75rem;
+}
+
+.navsection:hover .navlinks,
+.navsection:focus-within .navlinks {
+    display: flex;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.navlinks a:hover {
+    background-color: #F7DEE5;
+    color: #294735;
+}
+
+.mainhead {
+    text-align: center;
+}
+
+.tagline-main {
+    color: #C4E3D0;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.subtagline {
+    margin-top: 0;
+    font-size: 0.9rem;
+}
+
+
+main {
+    width: 90%;
+    max-width: 70rem;
+    margin: 2rem auto;
+    box-sizing: border-box;
+}
+
+section, footer {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        box-sizing: border-box;
+    }
+
+.aboutsection {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.profilephoto {
+    flex: 0 1 40%;
+    min-width: 0;
+    text-align: center;
+}
+
+.profilephoto img {
+    display: block;
+    width: 100%;
+    max-width: 22rem;
+    height: auto;
+    border: 4px solid #d28d9b;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.bio {
+    flex: 1;
+    min-width: 0;
+}
+
+
+#likes ul {
+    padding-left: 1.5rem;
+}
+
+#likes li {
+    padding: 0.25rem 0;
+}
+
+#likes li::marker {
+    color: #F7DEE5;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    aspect-ratio: 16 / 9;
+    margin: 1rem 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#projects img {
+    display: block;
+    width: 100%;
+    max-width: 35rem;
+    height: auto;
+    margin: 1rem auto;
+    border: 3px solid #d28d9b;
+    box-sizing: border-box;
+}
+
+footer {
+    text-align: center;
+    background-color: #343f37;
+    color: #F7DEE5;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.25rem;
+}
+
+footer h2, footer a {
+    color: #F7DEE5;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive design for phones */
+@media (max-width: 600px) {
+
+    body {
+        font-size: 0.9rem;
+        width: 100%;
+}
+
+    h1 {
+        font-size: 3rem;
+}
+
+    h2 {
+        font-size: 2rem;
+}
+
+    h3 {
+        font-size: 1.5rem;
+}
+
+    .siteheader {
+        width: 100%;
+        padding: 1rem 0.5rem;
+}
+
+    .mainhead {
+        padding: 2rem 0.5rem;
+}
+
+    main {
+        width: 92%;
+        margin: 1rem auto;
+}
+
+    section, footer {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        width: 100%;
+}
+
+    footer {
+        width: 100%;
+        left: 0;
+}
+
+
+    .aboutsection {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.profilephoto {
+    width: 100%;
+    order: 1;
+}
+
+.bio{
+    width: 100%;
+    order: 2;
+}
+
+.profilephoto img {
+    display: block;
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.navlinks {
+        max-width: 85vw;
+        gap: 0.25rem;
+}
+
+.navlinks a {
+        white-space: normal;
+        font-size: 0.75rem;
+        padding: 0.4rem 0.5rem;
+}
+    
+}
